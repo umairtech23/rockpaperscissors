@@ -1,6 +1,6 @@
 function getComputerChoice() {
     const choice = ["rock", "paper", "scissors"];
-    return choice[Math.floor(Math.random() * choice.length)];
+    return choice[Math.floor(Math.random() * 3)];
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -23,8 +23,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
 
 function playGame() {
     let playerSelection, computerSelection;
@@ -39,7 +37,7 @@ function playGame() {
             console.log(`You win! ${playerSelection} beats ${computerSelection}`);
         } else if (result === "Computer wins!") {
             computerScore++;
-            console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+            console.log(`You win! ${computerSelection} beats ${playerSelection}`);
         } else 
         console.log("It's a draw, try again!");
     }
@@ -52,3 +50,4 @@ function playGame() {
 }
 
 playGame();
+
